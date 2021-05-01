@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Elizabeth_PinosEP1.ventana">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="wallpaper.jpg" Aspect="AspectFill"/>
+            <BoxView Color="LightCyan" Opacity="0.8"/>
+        <Grid Margin="10,40,10,0" >
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+
+
+            </Grid.ColumnDefinitions>
+
+
+            <Label     x:Name="lblUsuario" Grid.Column="0"
+                       Grid.Row="7"
+                       Text="Ingrese su nombre:"
+                       HorizontalOptions="StartAndExpand"
+                       VerticalOptions="Center"
+                       FontSize="16"
+                        />
+
+            <Label Grid.Column="0"
+                       Grid.Row="0"
+                       Text="Ingrese su nombre:"
+                       HorizontalOptions="StartAndExpand"
+                       VerticalOptions="Center"
+                       FontSize="16"
+                       />
+            <Entry x:Name="txtNombre"
+                       Grid.Column="1"
+                       Grid.Row="0"
+                       Keyboard="Text"
+                       Placeholder="Nombre"/>
+
+            <Label Grid.Column="0"
+                      Grid.Row="1"
+                       Text="Ingrese el monto inicial:"
+                       HorizontalOptions="StartAndExpand"
+                       VerticalOptions="Center"
+                       FontSize="16"
+                       />
+            <Entry x:Name="txtMontoInicial"
+                       Grid.Column="1"
+                       Grid.Row="1"
+                       Keyboard="Numeric"
+                       Placeholder="0.0"/>
+
+            <Label Grid.Column="0"
+                      Grid.Row="2"
+                       Text="Ingrese pago mensual"
+                       HorizontalOptions="StartAndExpand"
+                       VerticalOptions="Center"
+                       FontSize="16"
+                       />
+            <Entry x:Name="txtPagoMensual"
+                       Grid.Column="1"
+                       Grid.Row="2"
+                       Keyboard="Numeric"
+                       Placeholder="0"
+                       IsReadOnly="True"/>
+
+            <Button x:Name="btnCalcular"
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Text="Calcular cuota" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="LightCyan" BorderRadius="20" TextColor="Black" Clicked="btnCalcular_Clicked" />
+            
+            <Button x:Name="btnGuardar" Text="Guardar" 
+                    Grid.Row="3" 
+                    Grid.Column="1" 
+                    VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="LightCyan" BorderRadius="20" TextColor="Black" Clicked="btnGuardar_Clicked"/>
+        </Grid>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
